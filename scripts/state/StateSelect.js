@@ -4,7 +4,6 @@ const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("click", e => {
     if (e.target.id === "stateDropdown") {
-        console.log("HIT STATE BUTTON");
         const selectedState = e.target.value;
         const customEvent = new CustomEvent("stateChosen", {
             detail: {
