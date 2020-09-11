@@ -9,7 +9,6 @@ const eventHub = document.querySelector(".container");
 let chosenStateCode = ""
 
 eventHub.addEventListener("stateChosen", e => {
-    debugger;
     chosenStateCode = e.detail.stateChosen
     getParks(chosenStateCode)
 })
@@ -25,6 +24,5 @@ export const getParks = (chosenStateCode) => {
         .then(
             parsedParks => {
                 parks = parsedParks
-                console.log(parks)
             })
 }
