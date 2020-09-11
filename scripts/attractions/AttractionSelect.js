@@ -17,6 +17,11 @@ eventHub.addEventListener("click", e => {
     }
 })
 
+//To have the attractions selected by state.
+//We need to get a full list of the attractions.
+//Then we need to filter for those that match the state
+//that was selected. Then take that array and pass it into
+//The renderer. So all of this needs to happen in AttractionSelect.
 
 export const AttractionSelect = () => {
     getAttractions()
