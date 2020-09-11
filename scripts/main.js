@@ -4,6 +4,6 @@ import { useWeather, getWeather } from "./weather/WeatherProvider.js";
 // dropDownMenu();
 
 useWeather();
-getWeather();
+getWeather(36.1627, -86.7816);
 
 StateSelect();
