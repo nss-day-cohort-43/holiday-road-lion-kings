@@ -20,18 +20,14 @@ export const StateSelect = () => {
 }
 
 const stateRenderer = (stateArray) => {
-    const domTarget = document.querySelector("#stateDropdown")
+    const domTarget = document.querySelector(".menuInfo")
     return domTarget.innerHTML = `
-        <label for="stateSelect">Show state: </label>
-        <select id="stateSelect">
-            <option value="0">Choose a state to visit!</option>
-            ${
+         ${
                 stateArray.map(state => {
                     return `
-                    <option>${state.name}</option>
+                    <p id="${state.name}">${state.abbreviation}</p>
                     `
                 }).join("")
             }
-        </select>
     `
 }
