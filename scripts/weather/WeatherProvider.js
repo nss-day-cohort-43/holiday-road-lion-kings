@@ -14,7 +14,6 @@ export const getWeather = (lat, lon) => {
   .then((response) => response.json()
   .then((parsedWeather) => {
       weather = parsedWeather.list
-      console.log(weather)
     })
   )
 };
