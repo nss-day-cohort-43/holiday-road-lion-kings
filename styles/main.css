@@ -1,3 +1,6 @@
+body {
+    background: url("/images/park.jpeg"),  rgba(0,0,0,0.5); 
+}
 .container {
     display: grid;
     grid-template-columns: .10fr .10fr .15fr .15fr
@@ -5,18 +8,36 @@
     grid-template-rows: auto;
     grid-template-areas: 
     "head head head head head head head head"
-    "drop drop weather weather weather weather itin itin"
+    "state state weather weather weather weather itin itin"
     "drop drop section section section section itin itin"
+    "drop drop section section section section saved saved"
     "info info section section section section saved saved"
-    ". . section section section section saved saved"
     "foot foot foot foot foot foot foot foot";
-    grid-gap: 20px;
-    text-align: center;  
+    grid-gap: 10px;
+    text-align: center;
 }
 .head {
     grid-area: head;
     min-height: 100px;
-    z-index: 1;   
+    border-radius: 5px;
+    z-index: 1;  
+    background-color: rgba(0,0,0,0.5); 
+    position: relative;
+}
+.navigation {
+   float: right;
+   position: relative;
+   top: -50px;
+}
+.navigation a {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 25px;
+}
+.navigation a:hover {
+    color: rgba(89, 207, 132, 0.6);
+    transition: 0.3s ease-in;
 }
 .logo {
     display: block;
@@ -25,33 +46,67 @@
     height: auto;
     z-index: 2;
 }
+.stateName {
+    grid-area: state;
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey; 
+}
+.stateHover {
+    animation: bounce 2s ease-in-out;
+    text-shadow: 5px 5px 5px gray;
+    font-size: 30px;
+    font-weight: bold;
+}
+.stateName h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px gray;
+}
 .details {
     grid-area: section;
     min-height: 600px;
-    background-color: lightskyblue;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
 } 
 .weather {
     grid-area: weather;
     min-height: 100px;
-    background-color: lightskyblue;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px; 
 }
 .menuInfo {
     grid-area: info;
-    background-color: lightskyblue;
-    min-height: 150px;
+    background-color: rgba(0,0,0,0.8);
+    width: auto;
     border-radius: 5px;
-    grid-row: 2/4;
+    grid-row: 3/5;
     visibility: hidden;
     z-index: 1;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: .10fr .10fr .10fr .10fr .10fr .10fr .10fr .10fr .10fr .10fr;
+    grid-template-rows: auto;
+    overflow: hidden;
+}
+.menuInfo p {
+    cursor: pointer;
+    color: white;
+    margin: auto;
+    height: 20px;
+    width: 20px;
+}
+.menuInfo p:hover {
+    transform: scale(1.2);
+    text-decoration: underline; 
 }
 .dropDown {
     grid-area: drop;
     min-height: 300px;
     border-radius: 10px;
-    background-color: lightskyblue;
-    box-shadow: 5px 5px 5px grey; 
+    background-color:  rgba(0,0,0,0.5);
+    overflow: hidden;
     z-index: 1;
 }
 .dropStyle {
@@ -59,45 +114,49 @@
     padding: 10px;
     border-radius: 5px;
     margin: 40px;
-    background-color: #a5d690;
-    box-shadow: 5px 5px 5px white;
+    background-color: rgba(89, 207, 132, 0.6);
     color: white;
     font-weight: bold;
     letter-spacing: 3px;
     position: relative;
 }
 .dropStyle:hover {
-    color: dodgerblue;
     transform: scale(1.1);
     cursor: pointer;
-    transition: 0.3s ease-in;
+    transition: 0.2s ease-in;
 }
 .itinerary {
     grid-area: itin;
     min-height: 300px;
-    background-color: lightskyblue;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
 }
 .savedItinerary {
     grid-area: saved;
     min-height: 300px;
-    background-color: lightskyblue;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
 }
 footer {
     grid-area: foot;
     min-height: 50px;
-    background-color: lightskyblue;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
-}
-.dropStyle:hover {
-    color: dodgerblue;
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: 0.3s ease-in;
+    margin-top: 20px;
+    padding-top: 20px;
 }
 .dropDown h2 {
     color: white;
     letter-spacing: 2px;
 }
-
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
