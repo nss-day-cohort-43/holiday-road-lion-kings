@@ -1,7 +1,7 @@
 import { useEateries, getEateries } from "./EateryProvider.js";
 
 const eventHub = document.querySelector(".container");
-const contentTarget = document.querySelector("stillNeedsAContainer");
+const contentTarget = document.querySelector("#eatery");
 
 eventHub.addEventListener("click", (event) => {
   if (event.target.id.startsWith("eatery--")) {
@@ -25,8 +25,10 @@ export const EaterySelect = () => {
 
 const render = (eateryCollection) => {
   return (contentTarget.innerHTML = `
-      ${eateryCollection.map((eateryObj) => {
-        return `<p id="eatery--${eateryObj.businessName}">${eateryObj.businessName}</p>`;
-      })}
+      ${eateryCollection
+        .map((eateryObj) => {
+          return `<p id="eatery--${eateryObj.businessName}">${eateryObj.businessName}</p>`;
+        })
+        .join("")}
   `);
 };
