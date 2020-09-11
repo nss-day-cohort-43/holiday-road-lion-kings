@@ -25,7 +25,7 @@ export const hoverEvent = () => {
        const stateArray = useStates();
 
         stateArray.map(state => {
-           if(event.target.id === `${state.name}`){
+           if(event.target.id === `stateSelected--${state.abbreviation}`){
                let stateName = document.querySelector(".stateName")
                stateName.innerHTML = `<p class="stateHover">${state.name}</p>`
            }
