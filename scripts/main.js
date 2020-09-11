@@ -3,6 +3,7 @@ import { StateSelect } from "./state/StateSelect.js"
 import { EaterySelect } from "./eateries/EaterySelect.js";
 import { getParks } from "./parks/ParkProvider.js";
 
+import { AttractionSelect } from "./attractions/AttractionSelect.js"
 
 
 
@@ -12,3 +13,4 @@ hoverEvent();
 StateSelect();
 EaterySelect();
 getParks();
+AttractionSelect();
