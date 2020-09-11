@@ -4,8 +4,16 @@ const eventHub = document.querySelector(".container");
 
 
 eventHub.addEventListener("click", e => {
-    if (e.target.id === "attractionsDropdown") {
-        console.log("CLICKED ATTRACTIONS")
+    if (e.target.id.startsWith("attraction--")) {
+        const [prefix, attractionId] = e.target.id.split("--");
+
+        const attractionEvent = new CustomEvent("attractionSelect", {
+            detail: {
+                attraction: attractionId,
+            }
+        })
+
+        eventHub.dispatchEvent(attractionEvent)
     }
 })
 
@@ -23,7 +31,7 @@ const attractionRenderer = (attractionsArray) => {
     const domTarget = document.querySelector("#attraction")
     return domTarget.innerHTML = `
         ${attractionsArray.map(attraction => {
-            return `<p id="attraction--${attraction.name}>${attraction.name}</p>`
+            return `<p id="attraction--${attraction.name}">${attraction.name}</p>`
             }).join("")
         }
     `
