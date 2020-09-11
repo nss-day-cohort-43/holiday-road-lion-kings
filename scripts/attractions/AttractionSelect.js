@@ -20,18 +20,11 @@ export const AttractionSelect = () => {
 
 
 const attractionRenderer = (attractionsArray) => {
-    const domTarget = document.querySelector("#attractionsDropdown")
+    const domTarget = document.querySelector("#attraction")
     return domTarget.innerHTML = `
-        <label for="attractionSelect">Select attraction: </label>
-        <select id="attractionSelect">
-            <option value="0">Choose an attraction to visit!</option>
-            ${
-                attractionsArray.map(attraction => {
-                    return `
-                    <option>${attraction.name}
-                    `
-                }).join("")
-            }
-        </select>
+        ${attractionsArray.map(attraction => {
+            return `<p id="attraction--${attraction.name}>${attraction.name}</p>`
+            }).join("")
+        }
     `
 }
