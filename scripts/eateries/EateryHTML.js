@@ -13,3 +13,4 @@ export const EateryHTML = (eateryObj) => {
         <li>Restrooms? ${eateryObj.restrooms}</li>
     `
 }
+
