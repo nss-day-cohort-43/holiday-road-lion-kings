@@ -3,14 +3,15 @@ import { useStates } from "./StateProvider.js"
 const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("click", e => {
-    if (e.target.id === "stateDropdown") {
-        const selectedState = e.target.value;
-        const customEvent = new CustomEvent("stateChosen", {
+    if (e.target.id.startsWith("stateSelected--")) {
+        const [prefix, stateId] = e.target.id.split("--")
+
+        const stateEvent = new CustomEvent("stateChosen", {
             detail: {
-                stateChosen: selectedState
+                stateChosen: stateId
             }
         })
-        eventHub.dispatchEvent(customEvent);
+        eventHub.dispatchEvent(stateEvent);
     }
 })
 
@@ -25,7 +26,7 @@ const stateRenderer = (stateArray) => {
          ${
                 stateArray.map(state => {
                     return `
-                    <p id="${state.name}">${state.abbreviation}</p>
+                    <p id="stateSelected--${state.abbreviation}">${state.abbreviation}</p>
                     `
                 }).join("")
             }
