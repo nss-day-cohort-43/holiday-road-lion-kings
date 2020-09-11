@@ -1,11 +1,11 @@
 import { useEateries, getEateries } from "./EateryProvider.js";
 
 const eventHub = document.querySelector(".container");
-const contentTarget = document.querySelector("thereIsNoContainerYet");
+const contentTarget = document.querySelector("stillNeedsAContainer");
 
 eventHub.addEventListener("click", (event) => {
   if (event.target.id.startsWith("eatery--")) {
-    const [ prefix, eateryId ] = event.target.id.split("--")
+    const [prefix, eateryId] = event.target.id.split("--");
 
     const eateryEvent = new CustomEvent("eaterySelected", {
       detail: {
@@ -24,9 +24,9 @@ export const EaterySelect = () => {
 };
 
 const render = (eateryCollection) => {
-  return contentTarget.innerHTML = `
-      ${eateryCollection.map(eateryObj => {
+  return (contentTarget.innerHTML = `
+      ${eateryCollection.map((eateryObj) => {
         return `<p id="eatery--${eateryObj.businessName}">${eateryObj.businessName}</p>`;
       })}
-  `;
+  `);
 };
