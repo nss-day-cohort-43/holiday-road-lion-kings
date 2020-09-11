@@ -3,14 +3,15 @@ import { useStates } from "./StateProvider.js"
 const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("click", e => {
-    if (e.target.id === "stateDropdown") {
-        const selectedState = e.target.value;
-        const customEvent = new CustomEvent("stateChosen", {
+    if (e.target.id.startsWith("stateSelected--")) {
+        const [prefix, stateId] = e.target.id.split("--")
+
+        const stateEvent = new CustomEvent("stateChosen", {
             detail: {
-                stateChosen: selectedState
+                stateChosen: stateId
             }
         })
-        eventHub.dispatchEvent(customEvent);
+        eventHub.dispatchEvent(stateEvent);
     }
 })
 
@@ -20,18 +21,14 @@ export const StateSelect = () => {
 }
 
 const stateRenderer = (stateArray) => {
-    const domTarget = document.querySelector("#stateDropdown")
+    const domTarget = document.querySelector(".menuInfo")
     return domTarget.innerHTML = `
-        <label for="stateSelect">Show state: </label>
-        <select id="stateSelect">
-            <option value="0">Choose a state to visit!</option>
-            ${
+         ${
                 stateArray.map(state => {
                     return `
-                    <option>${state.name}</option>
+                    <p id="stateSelected--${state.abbreviation}">${state.abbreviation}</p>
                     `
                 }).join("")
             }
-        </select>
     `
 }

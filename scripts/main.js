@@ -1,8 +1,11 @@
-// import { dropDownMenu } from "./UserInterface/user.js";
+import { dropDownMenu, hoverEvent } from "./UserInterface/user.js";
 import { StateSelect } from "./state/StateSelect.js"
-import { getAttractions } from "./attractions/AttractionProvider.js";
-import { AttractionSelect } from "./attractions/AttractionSelect.js"
-// dropDownMenu();
+import { useWeather, getWeather } from "./weather/WeatherProvider.js";
 
+getWeather();
+useWeather();
+
+
+dropDownMenu();
+hoverEvent();
 StateSelect();
-AttractionSelect();
