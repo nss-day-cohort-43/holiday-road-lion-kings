@@ -24,11 +24,15 @@ eventHub.addEventListener("click", e => {
 //The renderer. So all of this needs to happen in AttractionSelect.
 
 export const AttractionSelect = () => {
-    getAttractions()
-        .then(() => {
-            const attractionsArray = useAttractions();
-            attractionRenderer(attractionsArray);
-        }) 
+    eventHub.addEventListener("stateChosen", e => {
+        const stateChosen = e.detail.stateChosen;
+        getAttractions()
+            .then(() => {
+                const attractionsArray = useAttractions();
+                const filteredArray = attractionsArray.filter(attraction => attraction.state === stateChosen);
+                attractionRenderer(filteredArray);
+            })
+    })
 }
 
 
