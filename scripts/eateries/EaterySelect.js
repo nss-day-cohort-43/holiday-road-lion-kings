@@ -1,7 +1,7 @@
 import { useEateries, getEateries } from "./EateryProvider.js";
 
 const eventHub = document.querySelector(".container");
-const contentTarget = document.querySelector("#eatery");
+const contentTarget = document.querySelector(".menuInfo");
 
 eventHub.addEventListener("click", (event) => {
   if (event.target.id.startsWith("eatery--")) {
