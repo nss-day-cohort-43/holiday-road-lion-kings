@@ -21,7 +21,7 @@ export const StateSelect = () => {
 }
 
 const stateRenderer = (stateArray) => {
-    const domTarget = document.querySelector(".menuInfo")
+    const domTarget = document.querySelector(".stateInfo")
     return domTarget.innerHTML = `
          ${
                 stateArray.map(state => {

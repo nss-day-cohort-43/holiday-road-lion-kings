@@ -1,12 +1,12 @@
 import { useStates } from "../state/StateProvider.js";
 const listener = document.querySelector("#state")
-const menu = document.querySelector(".menuInfo")
+const menu = document.querySelector(".stateInfo")
 
 
 
 // Currently not using. This is a stretch goal.
 
-export const dropDownMenu = () => {    
+export const stateToggle = () => {    
     listener.addEventListener("click", () => {
         if(menu.style.visibility = "hidden"){
         menu.style.visibility = "visible"
@@ -19,7 +19,7 @@ export const dropDownMenu = () => {
      })
 }
 
-export const hoverEvent = () => {
+export const stateHoverEvent = () => {
     
     menu.addEventListener("mouseover", event => {
        const stateArray = useStates();
