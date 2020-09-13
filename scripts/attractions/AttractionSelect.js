@@ -28,8 +28,7 @@ export const AttractionSelect = () => {
         const stateChosen = e.detail.stateChosen;
         getAttractions()
             .then(() => {
-                const attractionsArray = useAttractions();
-                const filteredArray = attractionsArray.filter(attraction => attraction.state === stateChosen);
+                const filteredArray = useAttractions().filter(attraction => attraction.state === stateChosen);
                 attractionRenderer(filteredArray);
             })
     })
