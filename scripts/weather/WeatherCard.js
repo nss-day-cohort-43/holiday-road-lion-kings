@@ -21,5 +21,5 @@ export
 const temperatureConverter = (temp) => {
     let Fahrenheit = temp * 9/5 - 459.67
     Fahrenheit = Math.round(Fahrenheit)
-    console.log(Fahrenheit)
+    return Fahrenheit
 }
