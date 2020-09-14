@@ -24,6 +24,7 @@ eventHub.addEventListener("click", e => {
                 parkDetails(park)
                 getWeather(park.latitude, park.longitude)
                 .then(() => {
+                   return useWeather();
                 })  
             }
         })

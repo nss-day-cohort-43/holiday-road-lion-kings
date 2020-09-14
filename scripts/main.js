@@ -6,7 +6,7 @@ import { stateSelectPark } from "./parks/ParkSelect.js";
 import { parkToggle } from "./UserInterface/park.js";
 import { attractionToggle } from "./UserInterface/attraction.js";
 import { eateryToggle } from "./UserInterface/eatery.js";
-import { weatherInfo } from "./weather/WeatherCard.js";
+import { WeatherHTML } from "./weather/WeatherHTML.js";
 
 
 
@@ -27,8 +27,7 @@ AttractionSelect();
 eateryToggle();
 EaterySelect();
 
-
-weatherInfo();
+WeatherHTML();
 
 
 
