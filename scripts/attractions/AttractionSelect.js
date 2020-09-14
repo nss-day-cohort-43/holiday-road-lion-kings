@@ -18,7 +18,6 @@ eventHub.addEventListener("click", e => {
             }
         })
         attractionDetailsRenderer(attractionId);
-        console.log(attractionEvent);
         eventHub.dispatchEvent(attractionEvent)
     }
 })
