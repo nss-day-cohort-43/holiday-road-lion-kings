@@ -1,9 +1,8 @@
 import { getParks, useParks } from './ParkProvider.js';
 import { parkDetails } from '../detailsArea/parkDetailsHTML.js'
+import { getWeather, useWeather } from '../weather/WeatherProvider.js';
 
 const eventHub = document.querySelector(".container");
-
-// Event listener that creates parkChosen and send the name of the chosenPark to eventHub//
 
 let parks;
 eventHub.addEventListener("click", e => {
@@ -13,7 +12,6 @@ eventHub.addEventListener("click", e => {
     
     if (e.target.id.startsWith("parkSelected--")) {
         
-    
         const [prefix, parkId] = e.target.id.split("--")
         const parkEvent = new CustomEvent("parkChosen", {
             detail: {
@@ -24,6 +22,9 @@ eventHub.addEventListener("click", e => {
             parks.map(park => {
             if(park.fullName === parkId) {
                 parkDetails(park)
+                getWeather(park.latitude, park.longitude)
+                .then(() => {
+                })  
             }
         })
         eventHub.dispatchEvent(parkEvent);
