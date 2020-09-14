@@ -23,7 +23,7 @@ eventHub.addEventListener("click", e => {
             parks.map(park => {
             if(park.fullName === parkId) {
                 parkDetails(park)
-                getWeather(park.latitude, park.longitude)
+                getWeather(Math.round(park.latitude), Math.round(park.longitude))
                 .then(() => {
                    WeatherCardMaker();
                 })  
