@@ -1,0 +1,95 @@
+@import "dropdown.css";
+@import "details.css";
+@import "itineraryPreview.css";
+@import "itinerarySave.css";
+@import "weather.css";
+
+/* Page layout area /////////////////////////////// */
+body {
+    background: url("/images/park.jpeg")
+}
+.container {
+    display: grid;
+    grid-template-columns: .10fr .10fr .15fr .15fr
+    .15fr .15fr .10fr .10fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "head head head head head head head head"
+    "state state weather weather weather weather itin itin"
+    "drop drop section section section section itin itin"
+    "drop drop section section section section saved saved"
+    "info info section section section section saved saved"
+    "foot foot foot foot foot foot foot foot";
+    grid-gap: 10px;
+    text-align: center;
+}
+/* ////////////////////////////////////////////////// */
+
+/* Header Element Contents. //////////// */
+.head {
+    grid-area: head;
+    min-height: 100px;
+    border-radius: 5px;
+    z-index: 1;  
+    background-color: rgba(0,0,0,0.5); 
+    border: 3px solid white;
+    position: relative;
+}
+.logo {
+    display: block;
+    justify-content: left;
+    width: 100px;
+    height: auto;
+    z-index: 2;
+}
+.navigation {
+   float: right;
+   position: relative;
+   top: -50px;
+}
+.navigation a {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 25px;
+}
+.navigation a:hover {
+    color: rgba(89, 207, 132, 0.6);
+    transition: 0.3s ease-in;
+}
+/* //////////////////////////////////// */
+
+/* Footer area ////////////////////////// */
+footer {
+    grid-area: foot;
+    min-height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+/* //////////////////////////////////////// */
+
+/* Custum Scroll bar ///////////////////// */
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+/* ///////////////////////////////////////// */
