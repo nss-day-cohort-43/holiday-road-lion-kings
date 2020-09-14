@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation</title>
     <link rel="stylesheet" href="styles/main.css">
-
-
 </head>
 <body>
     <main class="container">
-
         <header class="head">
         <img class="logo" src="/images/logo.png" alt="logo">
            <div class="navigation"> 
@@ -21,27 +18,35 @@
             </div>
         </header>
 
-        <div class="stateName"><h2>Destination</h2></div>
+        <div class="stateName"><h1>Destination</h1></div>
         <sidebar class="dropDown">
-                
                 <div class="dropStyle" id="state">Select State</div>
+                <div class="dropStyle" id="park">Select Park</div>
                 <div class="dropStyle" id="attraction">Select Attraction</div>
                 <div class="dropStyle" id="eatery">Select Eatery</div>
         </sidebar>
-        <div class="menuInfo"></div>
-        
-
+        <div class="stateInfo"></div>
+        <div class="parkInfo"></div>
+        <div class="attractionInfo"></div>
+        <div class="eateryInfo"></div>
         <div class="weather">WEATHER</div>
-        <section class="details">DETAILS</section>
+
+        <section class="details">
+            <div class="imagePreview">
+                <img src="/images/ParkDefault.png" alt="ParkDefault">
+            </div>
+            <div class="information">
+                <div class="boxStyle locationContainer"></div>
+                <div class="boxStyle summaryContainer"> </div>
+                <div class="boxStyle keyDetailsContainer"></div>
+            </div>
+        </section>
 
         <sidebar class="itinerary">ITINERARY</sidebar>
         <sidebar class="savedItinerary">SAVED ITINERARY</sidebar>
-        
-
 
         <footer>FOOTER</footer>
     </main>
-
     <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
