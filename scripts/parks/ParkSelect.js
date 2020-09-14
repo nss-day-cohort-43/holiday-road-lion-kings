@@ -1,16 +1,19 @@
 import { getParks, useParks } from './ParkProvider.js';
-import { location } from '../detailsArea/parkDetailsHTML.js'
+import { parkDetails } from '../detailsArea/parkDetailsHTML.js'
 
 const eventHub = document.querySelector(".container");
 
+// Event listener that creates parkChosen and send the name of the chosenPark to eventHub//
 
 let parks;
 eventHub.addEventListener("click", e => {
+    document.querySelector(".locationContainer").style.visibility = "visible"
+    document.querySelector(".summaryContainer").style.visibility = "visible"
+    document.querySelector(".keyDetailsContainer").style.visibility = "visible"
+    
     if (e.target.id.startsWith("parkSelected--")) {
         
-        document.querySelector(".locationContainer").style.visibility = "visible"
-        document.querySelector(".summaryContainer").style.visibility = "visible"
-        document.querySelector(".keyDetailsContainer").style.visibility = "visible"
+    
         const [prefix, parkId] = e.target.id.split("--")
         const parkEvent = new CustomEvent("parkChosen", {
             detail: {
@@ -20,12 +23,12 @@ eventHub.addEventListener("click", e => {
             parks = useParks()
             parks.map(park => {
             if(park.fullName === parkId) {
-                location(park)
+                parkDetails(park)
             }
         })}
         eventHub.dispatchEvent(parkEvent);
 })
-
+// //////////////////////////////////////////////////////////////////////////////
 
 let chosenStateCode;
 
@@ -36,7 +39,6 @@ eventHub.addEventListener("stateChosen", e => {
     getParks(chosenStateCode)
     .then(() => {
         parkArray = useParks()
-    }).then(() => {
         parkRender(parkArray)
     })
 })}
