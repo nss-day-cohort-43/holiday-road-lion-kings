@@ -1,6 +1,8 @@
 import defaultExport from "../Settings.js"
 
-// need an event listener to get lat and lon from park
+const eventHub = document.querySelector(".container");
+
+
 
 const keys = () => {
     return defaultExport.weatherKey

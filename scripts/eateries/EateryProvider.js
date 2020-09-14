@@ -1,11 +1,3 @@
-const eventHub = document.querySelector(".container");
-
-let state = ""
-
-eventHub.addEventListener("stateChosen", event => {
-  state = event.detail.stateChosen
-})
-
 let eateries = [];
 
 export const useEateries = () => eateries.slice();
