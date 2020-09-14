@@ -4,4 +4,32 @@
     background-color: rgba(0,0,0,0.5);
     border: 3px solid white;
     border-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+}
+
+.weather__day {
+    align-self: center;
+}
+
+.weather__h2 {
+    font-size: 1.1em;
+    margin: 5px 0px;
+    padding: 0;
+}
+
+.weather__icon {
+    margin: 0;
+}
+
+.weather__degrees {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.weather__text {
+    margin: 0;
 }
