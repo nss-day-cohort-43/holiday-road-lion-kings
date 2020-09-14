@@ -4,8 +4,6 @@ const keys = () => {
     return defaultExport.npsKey
 }
 
-// const eventHub = document.querySelector(".container");
-
 
 let parks;
 

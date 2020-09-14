@@ -18,12 +18,10 @@ eventHub.addEventListener("click", e => {
             let attraction = useAttractions()
             attraction.map(attractions => {
                 if(attractions.name === attractionId){
-                    console.log(attractions)
                     attractionDetails(attractions)
                 }
             })
         })
-
         eventHub.dispatchEvent(attractionEvent)
     }
 })

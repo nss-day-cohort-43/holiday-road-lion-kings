@@ -17,17 +17,14 @@ eventHub.addEventListener("click", e => {
                 parkChosen: parkId
             }
         })
-        getParks(chosenStateCode)
-        .then(() => {
             parks = useParks()
-        }).then(() => {
             parks.map(park => {
             if(park.fullName === parkId) {
                 location(park)
             }
-        })})
+        })}
         eventHub.dispatchEvent(parkEvent);
-}})
+})
 
 
 let chosenStateCode;

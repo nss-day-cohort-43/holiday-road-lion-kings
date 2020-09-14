@@ -6,7 +6,7 @@
 
 /* Page layout area /////////////////////////////// */
 body {
-    background: url("/images/park.jpeg"),  rgba(0,0,0,0.5) 
+    background: url("/images/park.jpeg")
 }
 .container {
     display: grid;
