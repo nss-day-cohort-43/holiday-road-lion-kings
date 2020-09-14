@@ -1,6 +1,6 @@
 // Module to generate HTML for weather card
 
-import { } from "./WeatherCard.js"
+import { temperatureConverter } from "./WeatherCard.js"
 
 export const WeatherHTML = (weatherObj) => {
     return `
