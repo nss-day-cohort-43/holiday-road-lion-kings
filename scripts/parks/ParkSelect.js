@@ -25,8 +25,8 @@ eventHub.addEventListener("click", e => {
             if(park.fullName === parkId) {
                 parkDetails(park)
             }
+            eventHub.dispatchEvent(parkEvent);
         })}
-        eventHub.dispatchEvent(parkEvent);
 })
 // //////////////////////////////////////////////////////////////////////////////
 
