@@ -1,6 +1,7 @@
 import { getParks, useParks } from './ParkProvider.js';
 import { parkDetails } from '../detailsArea/parkDetailsHTML.js'
 import { getWeather, useWeather } from '../weather/WeatherProvider.js';
+import { WeatherCardMaker } from "../weather/WeatherCard.js"
 
 const eventHub = document.querySelector(".container");
 
@@ -24,7 +25,7 @@ eventHub.addEventListener("click", e => {
                 parkDetails(park)
                 getWeather(park.latitude, park.longitude)
                 .then(() => {
-                   return useWeather();
+                   WeatherCardMaker();
                 })  
             }
         })
