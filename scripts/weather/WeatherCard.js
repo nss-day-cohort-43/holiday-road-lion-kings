@@ -10,15 +10,11 @@ useWeather().map(weather => {
     console.log(weather.main.temp)
     weather.weather.map(weather => {
         console.log(weather)
-    })
-
-    
+    })    
 }))
 }
 
-export 
-
-const temperatureConverter = (temp) => {
+export const temperatureConverter = (temp) => {
     let Fahrenheit = temp * 9/5 - 459.67
     Fahrenheit = Math.round(Fahrenheit)
     return Fahrenheit
