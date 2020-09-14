@@ -1,3 +1,7 @@
+//Module duties:
+    //Listen for user to select an attraction and send that to the eventHub
+    //Renders select and detail components
+
 import { useAttractions, getAttractions } from "./AttractionProvider.js";
 import { attractionDetails } from "../detailsArea/attractionDetailsHTML.js";
 
@@ -13,44 +17,39 @@ eventHub.addEventListener("click", e => {
                 attraction: attractionId,
             }
         })
-        getAttractions()
-        .then(() => {
-            let attraction = useAttractions()
-            attraction.map(attractions => {
-                if(attractions.name === attractionId){
-                    attractionDetails(attractions)
-                }
-            })
-        })
+        attractionDetailsRenderer(attractionId);
+        console.log(attractionEvent);
         eventHub.dispatchEvent(attractionEvent)
     }
 })
 
-//To have the attractions selected by state.
-//We need to get a full list of the attractions.
-//Then we need to filter for those that match the state
-//that was selected. Then take that array and pass it into
-//The renderer. So all of this needs to happen in AttractionSelect.
-
+//Filter selected attraction by state
 export const AttractionSelect = () => {
     eventHub.addEventListener("stateChosen", e => {
         const stateChosen = e.detail.stateChosen;
         getAttractions()
             .then(() => {
                 const filteredArray = useAttractions().filter(attraction => attraction.state === stateChosen);
-                attractionRenderer(filteredArray);
+                attractionSelectRenderer(filteredArray);
             })
     })
 }
 
-
-const attractionRenderer = (attraction) => {
+//Render list of attractions for that state
+const attractionSelectRenderer = (attractionArray) => {
     const domTarget = document.querySelector(".attractionInfo")
     return domTarget.innerHTML = 
-         
-           (`<p id="attraction--${attraction.name}">${attraction.name}
-           - ${attraction.state}, ${attraction.city}</p>`)
-           
-        
-    
+        `${attractionArray.map(attraction => {
+            return `<p id="attraction--${attraction.name}">${attraction.name} - ${attraction.state}, ${attraction.city}</p>`       
+        }).join("")}`
+}
+
+//Takes selected attraction and returns its rendered details
+const attractionDetailsRenderer = (attractionId) => {
+    let attraction = useAttractions()
+    attraction.map(attractions => {
+        if (attractions.name === attractionId) {
+            attractionDetails(attractions)
+        }
+    })
 }

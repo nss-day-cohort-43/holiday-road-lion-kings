@@ -18,9 +18,7 @@ export const attractionDetails= (Obj) => {
     `
     keyDetailsTarget.innerHTML = `
     <h4>Key Details</h4>
-    <li>Souvenirs: ${yesOrNo(Obj.ameneties.souvenirs)}</li>
-    <li>Restrooms: ${yesOrNo(Obj.ameneties.restrooms)}</li>
+    <li>Souvenirs: ${yesOrNo(Obj.amenities.souvenirs)}</li>
+    <li>Restrooms: ${yesOrNo(Obj.amenities.restrooms)}</li>
     `
-    // imagePreview.innerHTML = `
-    // <img src="/images/AttractionStateMap.jpg" alt="State Map">`
 }
