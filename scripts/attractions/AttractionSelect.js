@@ -1,4 +1,5 @@
 import { useAttractions, getAttractions } from "./AttractionProvider.js";
+import { attractionDetails } from "../detailsArea/attractionDetailsHTML.js";
 
 const eventHub = document.querySelector(".container");
 
@@ -12,7 +13,15 @@ eventHub.addEventListener("click", e => {
                 attraction: attractionId,
             }
         })
-
+        getAttractions()
+        .then(() => {
+            let attraction = useAttractions()
+            attraction.map(attractions => {
+                if(attractions.name === attractionId){
+                    attractionDetails(attractions)
+                }
+            })
+        })
         eventHub.dispatchEvent(attractionEvent)
     }
 })
@@ -35,12 +44,13 @@ export const AttractionSelect = () => {
 }
 
 
-const attractionRenderer = (attractionsArray) => {
-    const domTarget = document.querySelector("#attraction")
-    return domTarget.innerHTML = `
-        ${attractionsArray.map(attraction => {
-            return `<p id="attraction--${attraction.name}">${attraction.name}</p>`
-            }).join("")
-        }
-    `
+const attractionRenderer = (attraction) => {
+    const domTarget = document.querySelector(".attractionInfo")
+    return domTarget.innerHTML = 
+         
+           (`<p id="attraction--${attraction.name}">${attraction.name}
+           - ${attraction.state}, ${attraction.city}</p>`)
+           
+        
+    
 }
