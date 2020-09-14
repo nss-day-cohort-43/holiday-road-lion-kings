@@ -1,0 +1,163 @@
+/* State display area, initial display "Destination */
+
+.stateName h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px gray;
+    position: relative;
+    top: 25px;
+}
+.stateName {
+    grid-area: state;
+    background-color: rgba(0,0,0, 0.5);
+    border: 3px solid white;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.stateHover {
+    animation: bounce 2s ease-in-out;
+    text-shadow: 5px 5px 5px gray;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 25px;
+}
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/* ///////////////////////////////////////////////////// */
+
+/* Custom Display Menu "State, Park, Attraction, Eatery" */
+.dropDown {
+    grid-area: drop;
+    max-height: 380px;
+    border-radius: 10px;
+    border: 3px solid white;
+    background-color:  rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 1;
+}
+.dropStyle {
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 40px;
+    background-color: rgba(89, 207, 132, 0.6);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.dropStyle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+/* ///////////////////////////////////////////////////////// */
+
+/* Displays option for "State"///////////////////////////// */
+.stateInfo {
+    grid-area: info;
+    background-color: rgba(0,0,0,0.8);
+    max-width: 380px;
+    max-height: 380px;
+    border-radius: 5px;
+    grid-row: 3/5;
+    visibility: hidden;
+    z-index: 1;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: .10fr .10fr .10fr .10fr .10fr .10fr .10fr .10fr .10fr .10fr;
+    grid-template-rows: auto;
+}
+.stateInfo p {
+    cursor: pointer;
+    color: white;
+    margin: auto;
+    height: 20px;
+    width: 20px;
+}
+.stateInfo p:hover {
+    text-decoration: underline; 
+}
+/* //////////////////////////////////////////////////////////// */
+
+/* Display option for "Eatery" //////////////////////////////// */
+
+
+.eateryInfo {
+    grid-area: info;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    overflow: auto;
+    position: relative;
+    max-height: 380px;
+    max-width: 380px;
+    border-radius: 5px;
+    grid-row: 3/5;
+    z-index: 1;
+    visibility: hidden;
+}
+.eateryInfo p:hover {
+    
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(89, 207, 132, 0.6);
+}
+/* ///////////////////////////////////////////////////////// */
+
+/* Display option for "Attraction" ////////////////////////  */
+
+.attractionInfo {
+    grid-area: info;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    overflow: auto;
+    position: relative;
+    max-height: 380px;
+    max-width: 380px;
+    border-radius: 5px;
+    grid-row: 3/5;
+    z-index: 1;
+    visibility: hidden;
+}
+.attractionInfo p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(89, 207, 132, 0.6);
+}
+/* ////////////////////////////////////////////////////////// */
+
+/* Display option for "Park" //////////////////////////////// */
+
+.parkInfo {
+    grid-area: info;
+    background-color: rgba(0,0,0,0.8);
+    display: grid;
+    grid-template-columns: .95fr;
+    color: white;
+    overflow: scroll;
+    max-height: 380px;
+    max-width: 380px;
+    border-radius: 5px;
+    grid-row: 3/5;
+    z-index: 1;
+    visibility: hidden;
+}
+.parkInfo p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(89, 207, 132, 0.6);
+}
+/* ///////////////////////////////////////////////////////// */

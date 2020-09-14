@@ -1,0 +1,7 @@
+.weather {
+    grid-area: weather;
+    min-height: 150px;
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid white;
+    border-radius: 10px; 
+}

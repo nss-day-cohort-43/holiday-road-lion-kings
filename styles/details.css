@@ -1,0 +1,74 @@
+.details {
+    grid-area: section;
+    min-height: 600px;
+    background-color: rgba(0,0,0,0.5);
+    border: 3px solid white;
+    border-radius: 10px;
+} 
+
+/* Image area of details //////////////////////////////// */
+
+.imagePreview {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: auto;
+    height: 350px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.imagePreview img {
+    width: 615px;
+    height: 350px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+/* ///////////////////////////////////////////// */
+
+/* Location Summary and Key Details area /////// */
+.information {
+ border-bottom-right-radius: 10px;
+ border-bottom-left-radius: 10px;
+ height: 250px;
+ display: flex;
+ justify-content: space-evenly;
+}
+.information {
+    color: white;
+    margin: 10px;
+}
+.information h4 {
+    color: white;
+    position: relative;
+    left: -15px;
+}
+.boxStyle {
+    background-color:rgba(0,0,0,0.7);
+    border: 3px solid white;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    overflow: scroll;
+}
+.boxStyle li {
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+.summaryContainer,
+.locationContainer,
+.keyDetailsContainer {
+    visibility: hidden;
+}
+.summaryContainer p,
+.locationContainer p,
+.keyDetailsContainer p {
+    color: white;
+    text-align: left;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+/* ////////////////////////////////////// */
