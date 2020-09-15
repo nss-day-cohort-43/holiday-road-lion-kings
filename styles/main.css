@@ -4,13 +4,6 @@
 @import "itinerarySave.css";
 @import "weather.css";
 
-@font-face {
-  font-family: "Stay Classy SLDT";
-  src: url("./fonts/Stay Classy SLDT.ttf") form("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Page layout area /////////////////////////////// */
 body {
     background: url("/images/park.jpeg");
@@ -100,7 +93,7 @@ footer {
 
 /* special fonts in strategic spots */
 .caligraphy {
-  font-family: 'Stay Classy SLDT';
+  font-family: 'League Script';
 }
 .handwriting {
   font-family: 'Amatic SC', cursive;
@@ -108,5 +101,5 @@ footer {
 #detailsParkButton,
 #detailsAttractionsButton,
 #detailsEateryButton {
-  font-family: 'Stay Classy SLDT';
+  font-family: 'League Script';
 }
