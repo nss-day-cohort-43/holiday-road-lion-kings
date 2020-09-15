@@ -3,10 +3,11 @@ import { yesOrNo } from "./TrueOrFalse.js";
 const locationTarget = document.querySelector(".locationContainer")
 const summaryTarget = document.querySelector(".summaryContainer")
 const keyDetailsTarget = document.querySelector(".keyDetailsContainer")
+const buttonTarget = document.querySelector(".addItinButton")
 
 export const eateryDetails= (Obj) => {
     locationTarget.innerHTML = `
-    <h2>${Obj.businessName}</h2>
+    <h2 class="detailH2">${Obj.businessName}</h2>
     <p>Name: ${Obj.businessName}</p>
     <p>State: ${Obj.state}</p>
     <p>City: ${Obj.city}</p>
@@ -23,5 +24,8 @@ export const eateryDetails= (Obj) => {
     <li>Diaper Facility: ${yesOrNo(Obj.ameneties.diaperFacility)}</li>
     <li>Playground: ${yesOrNo(Obj.ameneties.playground)}</li>
     <li>Restrooms: ${yesOrNo(Obj.ameneties.restrooms)}</li>
+    `
+    buttonTarget.innerHTML = `
+    <button id="detailsEateryButton">Add Eatery to Itinerary</button>
     `
 }
