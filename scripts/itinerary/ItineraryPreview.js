@@ -1,4 +1,3 @@
-
 const eventHub = document.querySelector(".container");
 
 //Check which itinerary button has been pressed, then
@@ -22,7 +21,8 @@ eventHub.addEventListener("click", e => {
 const addPark = () => {
     const targetPark = document.querySelector(".itinPark")
     return targetPark.innerHTML = `
-        <p>${document.querySelector(".detailH2").innerHTML}</p>
+        <h3>Park</h3>
+        <p class="addedPark">${document.querySelector(".detailH2").innerHTML}</p>
         `
 }
 
@@ -30,7 +30,8 @@ const addPark = () => {
 const addAttraction = () => {
     const targetAttraction = document.querySelector(".itinAttraction")
     return targetAttraction.innerHTML =  `
-        <p>${document.querySelector(".detailH2").innerHTML}</p>
+        <h3>Attraction</h3>
+        <p class="addedAttraction">${document.querySelector(".detailH2").innerHTML}</p>
         `
 }
 
@@ -38,11 +39,11 @@ const addAttraction = () => {
 const addEatery = () => {
     const targetEatery = document.querySelector(".itinEatery")
     return targetEatery.innerHTML = `
-    <p>${document.querySelector(".detailH2").innerHTML}</p>
-    `
+        <h3>Eatery</h3>
+        <p class="addedEatery">${document.querySelector(".detailH2").innerHTML}</p>
+        `
 }
  
 //Links ItineraryPreview.js to the main
 export const ItineraryPreview = () => {
-    console.log("Itinerary Preview Loaded")
 }
