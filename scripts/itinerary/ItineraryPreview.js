@@ -1,7 +1,8 @@
 
 const eventHub = document.querySelector(".container");
 
-//When add to Itinerary is clicked
+//Check which itinerary button has been pressed, then
+//add that info to the preview section.
 eventHub.addEventListener("click", e => {
     const whichButtonPressed = e.target.id;
     switch(whichButtonPressed) {
@@ -12,7 +13,6 @@ eventHub.addEventListener("click", e => {
             addAttraction();
             break;
         case "detailsEateryButton":
-            console.log("EATERY PRESSED")
             addEatery();
             break;
         }
