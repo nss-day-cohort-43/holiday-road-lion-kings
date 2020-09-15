@@ -7,7 +7,7 @@
 /* Page layout area /////////////////////////////// */
 body {
     background: url("/images/park.jpeg");
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Amatic SC', cursive;
 }
 .container {
     display: grid;
@@ -39,24 +39,20 @@ body {
 .logo {
     display: block;
     justify-content: left;
-    width: 100px;
+    width: 155px;
     height: auto;
     z-index: 2;
 }
-.navigation {
+.title {
    float: right;
    position: relative;
-   top: -50px;
+   top: -30px;
 }
-.navigation a {
+.title p {
     text-decoration: none;
     color: white;
-    margin: 20px;
-    font-size: 25px;
-}
-.navigation a:hover {
-    color: rgba(89, 207, 132, 0.6);
-    transition: 0.3s ease-in;
+    margin: 10px;
+    font-size: 50px;
 }
 /* //////////////////////////////////// */
 
@@ -94,3 +90,11 @@ footer {
     background: #555;
   }
 /* ///////////////////////////////////////// */
+
+/* special fonts in strategic spots */
+.caligraphy {
+  font-family: 'Stay Classy SLDT';
+}
+.handwriting {
+  font-family: 'Amatic SC', cursive;
+}
