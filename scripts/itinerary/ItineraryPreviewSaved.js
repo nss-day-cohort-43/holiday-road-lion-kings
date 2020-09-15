@@ -1,7 +1,7 @@
 import { saveItinerary } from "./ItineraryPreviewSaveProvider.js"
 
 const eventHub = document.querySelector(".container")
-console.log("hello?")
+
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveItin") {
         const parkInput = document.querySelector(".addedPark")
@@ -14,9 +14,10 @@ eventHub.addEventListener("click", clickEvent => {
                 "Attraction": attractionInput.innerHTML,
                 "Eatery": eateryInput.innerHTML
             }
-            debugger;
             saveItinerary(newItin)
             .then(() => parkInput.innerHTML = "")
+            .then(() => attractionInput.innerHTML = "")
+            .then(() => eateryInput.innerHTML = "")
         }
     }
 })

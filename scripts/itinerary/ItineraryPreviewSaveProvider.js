@@ -7,5 +7,4 @@ export const saveItinerary = itinerary => {
         },
         body: JSON.stringify(itinerary)
     })
-    // .then(() => dispatchStateChangeEvent(player))
 }

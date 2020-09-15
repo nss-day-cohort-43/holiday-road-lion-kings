@@ -3,9 +3,6 @@ const listener = document.querySelector("#state")
 const menu = document.querySelector(".stateInfo")
 
 
-
-// Currently not using. This is a stretch goal.
-
 export const stateToggle = () => {    
     listener.addEventListener("click", () => {
         if(menu.style.visibility = "hidden"){
