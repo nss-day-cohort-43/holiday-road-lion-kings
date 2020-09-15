@@ -6,11 +6,12 @@ const eventHub = document.querySelector(".container");
 
 let parks;
 eventHub.addEventListener("click", e => {
-    document.querySelector(".locationContainer").style.visibility = "visible"
-    document.querySelector(".summaryContainer").style.visibility = "visible"
-    document.querySelector(".keyDetailsContainer").style.visibility = "visible"
-    
+  
     if (e.target.id.startsWith("parkSelected--")) {
+        document.querySelector(".locationContainer").style.visibility = "visible"
+        document.querySelector(".summaryContainer").style.visibility = "visible"
+        document.querySelector(".keyDetailsContainer").style.visibility = "visible"
+        document.querySelector(".detailsButton").style.visibility = "visible"
         
         const [prefix, parkId] = e.target.id.split("--")
         const parkEvent = new CustomEvent("parkChosen", {
@@ -23,8 +24,6 @@ eventHub.addEventListener("click", e => {
             if(park.fullName === parkId) {
                 parkDetails(park)
                 getWeather(park.latitude, park.longitude)
-                .then(() => {
-                })  
             }
         })
         eventHub.dispatchEvent(parkEvent);

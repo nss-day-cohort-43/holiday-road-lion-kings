@@ -7,7 +7,7 @@ const keyDetailsTarget = document.querySelector(".keyDetailsContainer")
 
 export const attractionDetails= (Obj) => {
     locationTarget.innerHTML = `
-    <h4>Location</h4>
+    <h2>${Obj.name}</h2>
     <p>Name: ${Obj.name}</p>
     <p>State: ${Obj.state}</p>
     <p>City: ${Obj.city}</p>

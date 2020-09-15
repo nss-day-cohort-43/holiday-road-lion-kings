@@ -6,7 +6,8 @@
 
 /* Page layout area /////////////////////////////// */
 body {
-    background: url("/images/park.jpeg")
+    background: url("/images/park.jpeg");
+    font-family: 'Roboto', sans-serif;
 }
 .container {
     display: grid;
