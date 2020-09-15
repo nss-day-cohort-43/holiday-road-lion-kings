@@ -4,6 +4,13 @@
 @import "itinerarySave.css";
 @import "weather.css";
 
+@font-face {
+  font-family: "Stay Classy SLDT";
+  src: url("./fonts/Stay Classy SLDT.otf") form("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Page layout area /////////////////////////////// */
 body {
     background: url("/images/park.jpeg");
@@ -97,4 +104,9 @@ footer {
 }
 .handwriting {
   font-family: 'Amatic SC', cursive;
+}
+#detailsParkButton,
+#detailsAttractionsButton,
+#detailsEateryButton {
+  font-family: 'Stay Classy SLDT';
 }
