@@ -25,7 +25,7 @@ const renderWeather = (weatherArray) => {
     let HTMLContainer = ""
     weatherArray.map(weatherObj => {
         const [date, time] = weatherObj.dt_txt.split(" ");
-        if (time === "12:00:00") {
+        if (time === "15:00:00") {
             HTMLContainer += WeatherHTML(date, weatherObj)
         }
     })

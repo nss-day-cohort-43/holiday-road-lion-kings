@@ -1,9 +1,10 @@
 .details {
     grid-area: section;
-    min-height: 600px;
+    height: auto;
     background-color: rgba(0,0,0,0.5);
     border: 3px solid white;
     border-radius: 10px;
+    overflow: hidden;
 } 
 
 /* Image area of details //////////////////////////////// */
@@ -15,7 +16,8 @@
     height: 350px;
     padding-top: 10px;
     padding-bottom: 10px;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
 }
 .imagePreview img {
     width: 615px;
@@ -42,21 +44,25 @@
     position: relative;
     left: -15px;
 }
+.information h2 {
+    text-decoration: underline;
+}
 .boxStyle {
     background-color:rgba(0,0,0,0.7);
     border: 3px solid white;
     text-align: center;
     margin-top: 10px;
     border-radius: 10px;
-    width: 300px;
-    height: auto;
-    overflow: scroll;
+    width: 480px;
+    height: 250px;
+    overflow: auto;
 }
 .boxStyle li {
     color: white;
     text-align: left;
     padding: 10px;
 }
+.detailsButton,
 .summaryContainer,
 .locationContainer,
 .keyDetailsContainer {
@@ -71,4 +77,29 @@
     line-height: 1.5em;
 }
 
+.detailsButton{
+    height: 30px;
+    margin-top: 20px;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: center;
+    
+}
 /* ////////////////////////////////////// */
+
+.summaryContainer {
+    background-color:rgba(0,0,0,0.7);
+    border: 3px solid white;
+    text-align: center;
+    /* margin-top: 10px; */
+    border-radius: 10px;
+    width: 330px;
+    height: 350px;
+    overflow: auto;
+}
+.summaryContainer h4 {
+    color: white;
+    position: relative;
+}

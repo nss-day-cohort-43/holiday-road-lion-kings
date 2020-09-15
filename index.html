@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation</title>
     <link rel="stylesheet" href="styles/main.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -39,21 +39,59 @@
 
         <section class="details">
             <div class="imagePreview">
-                <img src="/images/ParkDefault.png" alt="ParkDefault">
+                <div class="parkImage">
+                    <img src="/images/ParkDefault.png" alt="ParkDefault">
+                </div>
+                <div class="summaryContainer"> </div>
             </div>
 
             <div class="information">
                 <div class="boxStyle locationContainer"></div>
-                
-                <div class="boxStyle summaryContainer"> </div>
 
                 <div class="boxStyle keyDetailsContainer"></div>
             </div>
             <button class="detailsButton">Add to Itinerary</button>
         </section>
 
-        <sidebar class="itinerary">ITINERARY</sidebar>
-        <sidebar class="savedItinerary">SAVED ITINERARY</sidebar>
+        <sidebar class="itineraryContainer">
+            <h2 class="itinPreviewHeader">Itinerary Preview</h2>
+            <div class="itinPark">
+                <p>Park Here</p>
+            </div>
+            <div class="itinAttraction">
+                <p>Attraction Here</p>
+            </div>
+            <div class="itinEatery">
+                <p>Eatery Here</p>
+            </div>
+            <button class="saveItin">SAVE</button>
+        </sidebar>
+
+        <sidebar class="savedItineraryContainer">
+            <h2 class="savedItinHeader">Saved Itineraries</h2>
+            <div class="savedItinerary">
+                <div class="savedItinStyle">
+                    <p>Random Text</p>
+                    <p>Add Actual HTML</p>
+                    <p>Just here for Preview</p>
+                </div>
+                <div class="savedItinStyle">
+                    <p>Random Text</p>
+                    <p>Add Actual HTML</p>
+                    <p>Just here for Preview</p>
+                </div >
+                <div class="savedItinStyle">
+                    <p>Random Text</p>
+                    <p>Add Actual HTML</p>
+                    <p>Just here for Preview</p>
+                </div>
+                <div class="savedItinStyle">
+                    <p>Random Text</p>
+                    <p>Add Actual HTML</p>
+                    <p>Just here for Preview</p>
+                </div>
+            </div>
+        </sidebar>
         
 
 
