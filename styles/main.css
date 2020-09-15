@@ -93,8 +93,13 @@ footer {
 
 /* special fonts in strategic spots */
 .caligraphy {
-  font-family: 'Stay Classy SLDT';
+  font-family: 'League Script';
 }
 .handwriting {
   font-family: 'Amatic SC', cursive;
+}
+#detailsParkButton,
+#detailsAttractionsButton,
+#detailsEateryButton {
+  font-family: 'League Script';
 }

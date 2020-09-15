@@ -8,13 +8,6 @@ import { attractionToggle } from "./UserInterface/attraction.js";
 import { eateryToggle } from "./UserInterface/eatery.js";
 import { ItineraryPreview } from "./itinerary/ItineraryPreview.js";
 
-
-
-
-
-
-
-
 stateToggle();
 stateHoverEvent();
 StateSelect();
