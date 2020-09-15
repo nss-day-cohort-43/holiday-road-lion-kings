@@ -9,13 +9,6 @@ import { eateryToggle } from "./UserInterface/eatery.js";
 import { ItineraryPreview } from "./itinerary/ItineraryPreview.js";
 import { ItineraryPreviewSaved } from "./itinerary/ItineraryPreviewSaved.js";
 
-
-
-
-
-
-
-
 stateToggle();
 stateHoverEvent();
 StateSelect();
