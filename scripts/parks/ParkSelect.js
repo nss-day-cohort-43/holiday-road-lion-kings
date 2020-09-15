@@ -12,7 +12,7 @@ eventHub.addEventListener("click", e => {
         document.querySelector(".locationContainer").style.visibility = "visible"
         document.querySelector(".summaryContainer").style.visibility = "visible"
         document.querySelector(".keyDetailsContainer").style.visibility = "visible"
-        document.querySelector(".detailsButton").style.visibility = "visible"
+        document.querySelector(".addItinButton").style.visibility = "visible"
         
         const [prefix, parkId] = e.target.id.split("--")
         const parkEvent = new CustomEvent("parkChosen", {

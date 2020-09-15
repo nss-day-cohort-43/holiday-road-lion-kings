@@ -6,6 +6,7 @@ import { stateSelectPark } from "./parks/ParkSelect.js";
 import { parkToggle } from "./UserInterface/park.js";
 import { attractionToggle } from "./UserInterface/attraction.js";
 import { eateryToggle } from "./UserInterface/eatery.js";
+import { ItineraryPreview } from "./itinerary/ItineraryPreview.js";
 
 
 
@@ -27,7 +28,7 @@ AttractionSelect();
 eateryToggle();
 EaterySelect();
 
-
+ItineraryPreview();
 
 
 

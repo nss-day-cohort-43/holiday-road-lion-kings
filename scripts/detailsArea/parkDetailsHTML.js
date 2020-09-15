@@ -2,10 +2,11 @@ const locationTarget = document.querySelector(".locationContainer")
 const summaryTarget = document.querySelector(".summaryContainer")
 const keyDetailsTarget = document.querySelector(".keyDetailsContainer")
 const imagePreview = document.querySelector(".parkImage")
+const buttonTarget = document.querySelector(".addItinButton")
 
 export const parkDetails= (Obj) => {
     locationTarget.innerHTML = `
-    <h2>${Obj.fullName}</h2>
+    <h2 class="detailH2">${Obj.fullName}</h2>
     <p>${Obj.directionsInfo}</p>
     `
     summaryTarget.innerHTML = `
@@ -22,6 +23,10 @@ export const parkDetails= (Obj) => {
         return image.url
     })
     imagePreview.innerHTML = `<img src="${images[0]}" alt="park">`
+
+    buttonTarget.innerHTML = `
+        <button id="detailsParkButton">Add Park to Itinerary</button>
+    `
   
 }
 
