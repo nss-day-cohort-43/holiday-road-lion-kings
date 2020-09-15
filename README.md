@@ -13,7 +13,7 @@ The user begins the process by selecting a state. The app then provides a list o
 * JSON server
 * GitHub
 * OpenWeatherMap Weather API [Weather API](https://openweathermap.org/api)
-* National Park Service API [National Park Service API] (https://www.nps.gov/subjects/digital/nps-data-api.htm)
+* National Park Service API [National Park Service API](https://www.nps.gov/subjects/digital/nps-data-api.htm)
 
 ### Installing
 
@@ -42,10 +42,10 @@ The user begins the process by selecting a state. The app then provides a list o
 
 Contributors names and contact info
 
-Terra Roush
-Sam Edwards
-Hanako Hashiguchi
-Tristan Wyatt
+* Terra Roush
+* Sam Edwards
+* Hanako Hashiguchi
+* Tristan Wyatt
 
 ## Version History
 
@@ -54,4 +54,4 @@ Tristan Wyatt
 
 ## Acknowledgments
 
-Thank you DOMPizzie for the [README template] (https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
+Thank you DOMPizzie for the [README template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
