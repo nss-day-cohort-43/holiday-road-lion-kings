@@ -1,4 +1,4 @@
-import { saveItinerary } from "./ItineraryPreviewSaveProvider.js"
+import { saveTrip } from "../savedTrips/TripProvider.js"
 
 const eventHub = document.querySelector(".container")
 
@@ -14,7 +14,7 @@ eventHub.addEventListener("click", clickEvent => {
                 "Attraction": attractionInput.innerHTML,
                 "Eatery": eateryInput.innerHTML
             }
-            saveItinerary(newItin)
+            saveTrip(newItin)
             .then(() => parkInput.innerHTML = "")
             .then(() => attractionInput.innerHTML = "")
             .then(() => eateryInput.innerHTML = "")
@@ -22,4 +22,4 @@ eventHub.addEventListener("click", clickEvent => {
     }
 })
 
-export const ItineraryPreviewSaved = () => {}
+export const ItineraryPreviewSave = () => {}

@@ -1,3 +1,6 @@
+// need to create separate functions to bring in separate park, attraction and eatery, then do a switch case like in ItineraryPreview.js. Then use one function to call in main
+
+
 eventHub.addEventListener("click", e => {
     if (e.target.id === "saveItin") {
         const noteContent = document.querySelector("#note-text");
@@ -16,7 +19,7 @@ eventHub.addEventListener("click", e => {
     }
   });
 
-export const ItinerarySavedHTML = (itineraryObj) => {
+export const TripHTML = (itineraryObj) => {
     const targetPark = document.querySelector(".itinPark")
     // const targetAttraction = document.querySelector(".itinAttraction")
     // const targetEatery = document.querySelector(".itinEatery")

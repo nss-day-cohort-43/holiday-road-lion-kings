@@ -6,21 +6,21 @@ const dispatchStateChangeEvent = () => {
     eventHub.dispatchEvent(itineraryStateChangedEvent);
 };
 
-let itineraries = [];
+let trips = [];
 
-export const getItineraries = () => {
+export const getTrips = () => {
     return fetch("http://localhost:8088/db.json")
     .then((response) => response.json())
-    .then((parsedItineraries) => {
-        itineraries = parsedItineraries;
+    .then((parsedTrips) => {
+        trips = parsedTrips;
     });
 };
 
-export const useItineraries = () => {
-    return itineraries.slice();
+export const useTrips = () => {
+    return trips.slice();
 }
 
-export const saveItinerary = itineraryObj => {
+export const saveTrip = itineraryObj => {
     return fetch('http://localhost:8088/itineraries', {
         method: "POST",
         headers: {
@@ -28,6 +28,6 @@ export const saveItinerary = itineraryObj => {
         },
         body: JSON.stringify(itineraryObj)
     })
-    .then(getItineraries)
+    .then(getTrips)
     .then(dispatchStateChangeEvent)
 }
