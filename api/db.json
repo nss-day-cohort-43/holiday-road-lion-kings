@@ -1,3 +1,18 @@
 {
-  "itineraries": []
+  "itineraries": [
+    {
+      "dateCreated": 1600216790206,
+      "Park": "Padre Island National Seashore",
+      "Attraction": "Wax Last Supper",
+      "Eatery": "Salt Lick",
+      "id": 1
+    },
+    {
+      "dateCreated": 1600220401797,
+      "Park": "Grand Canyon National Park",
+      "Attraction": "Elvis Memorial Chapel",
+      "Eatery": "El Charro Cafe",
+      "id": 2
+    }
+  ]
 }
