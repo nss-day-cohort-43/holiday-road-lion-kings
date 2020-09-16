@@ -3,32 +3,31 @@
 
 eventHub.addEventListener("click", e => {
     if (e.target.id === "saveItin") {
-        const noteContent = document.querySelector("#note-text");
-        const noteCriminal = document.querySelector("#note-criminalSelect");
-        if (noteCriminal.value !== "0") {
-            const newNote = {
-              text: noteContent.value,
-              date: Date.now(),
-              suspectName: noteCriminal.value,
-            };
-            saveNote(newNote);
-          } else {
-            window.alert("Choose a suspect");
-          }
+      const parkContent = document.querySelector(".addedPark");
+      const attractionContent = document.querySelector(".addedAttraction");
+      const eateryContent = document.querySelector(".addedEatery");
+
+      if (noteCriminal.value !== "0") {
+        const newTrip = {
+          date: Date.now(),
+          park: parkContent.value,
+          attraction: attractionContent.value,
+          eatery: eateryContent.value,
+          
+        };
+        saveTrip(newTrip);
+      } else {
+        window.alert("You must select one of each");
+      }
       
     }
   });
 
 export const TripHTML = (itineraryObj) => {
-    const targetPark = document.querySelector(".itinPark")
+    const targetTrip = document.querySelector(".savedItinStyle")
     // const targetAttraction = document.querySelector(".itinAttraction")
     // const targetEatery = document.querySelector(".itinEatery")
-    return targetPark.innerHTML = `
-        <h3>Park</h3>
-        <p class="addedPark">${document.querySelector(".detailH2").innerHTML}</p>
-        // <h3>Attraction</h3>
-        // <p class="addedAttraction">${document.querySelector(".detailH2").innerHTML}</p>
-        // <h3>Eatery</h3>
-        // <p class="addedEatery">${document.querySelector(".detailH2").innerHTML}</p>
+    return targetTrip.innerHTML = `
+        
     `
 }
